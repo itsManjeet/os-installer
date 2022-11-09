@@ -34,6 +34,15 @@ template WelcomePage : Box {
     vexpand: true;
     styles ["bottom-button"]
 
+    [start]
+    Button {
+      action-name: "app.launch-terminal";
+      icon-name: "utilities-terminal-symbolic";
+      focusable: true;
+      valign: end;
+      styles ["circular", "flat"]
+    }
+
     [center]
     Button {
       /* Translators: On button. */

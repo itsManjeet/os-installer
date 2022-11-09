@@ -4,9 +4,10 @@ using Adw 1;
 template OsInstallerWindow : Adw.ApplicationWindow {
   width-request: 360;
   height-request: 480;
-  default-width: 420;
-  default-height: 560;
+  default-width: 980;
+  default-height: 700;
   destroy => _on_quit();
+  resizable: false;
 
   Box {
     orientation: vertical;
@@ -50,8 +51,8 @@ template OsInstallerWindow : Adw.ApplicationWindow {
 
       [title]
       Stack image_stack {
-        margin-bottom: 12;
-        margin-top: 12;
+        margin-bottom: 23;
+        margin-top: 42;
         transition-type: crossfade;
 
         StackPage {

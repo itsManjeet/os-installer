@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import os
 from pathlib import Path
 from threading import Lock
 from os.path import exists
@@ -285,6 +286,9 @@ class OsInstallerWindow(Adw.ApplicationWindow):
             popup = builder.get_object('about_window')
             if popup:
                 self._show_dialog(popup)
+
+    def launch_terminal(self):
+        os.system("kgx &");
 
     def show_confirm_quit_dialog(self):
         popup = ConfirmQuitPopup(self.quit_callback)
