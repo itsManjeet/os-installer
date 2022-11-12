@@ -36,10 +36,10 @@ template WelcomePage : Box {
 
     [start]
     Button {
-      action-name: "app.launch-terminal";
       icon-name: "utilities-terminal-symbolic";
       focusable: true;
       valign: end;
+      clicked => clicked_terminal_button();
       styles ["circular", "flat"]
     }
 

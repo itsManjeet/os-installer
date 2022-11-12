@@ -287,9 +287,6 @@ class OsInstallerWindow(Adw.ApplicationWindow):
             if popup:
                 self._show_dialog(popup)
 
-    def launch_terminal(self):
-        os.system("kgx &");
-
     def show_confirm_quit_dialog(self):
         popup = ConfirmQuitPopup(self.quit_callback)
         self._show_dialog(popup)

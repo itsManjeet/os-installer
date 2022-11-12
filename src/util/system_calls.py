@@ -29,6 +29,8 @@ def is_booted_with_uefi():
 def open_disks():
     _run_program(global_state.get_config('disks_cmd').split())
 
+def open_terminal():
+    _run_program(global_state.get_config('terminal').split())
 
 def open_internet_search():
     browser_cmd = global_state.get_config('browser_cmd').split()

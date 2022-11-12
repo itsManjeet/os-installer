@@ -6,6 +6,7 @@ from gi.repository import Gtk
 
 from .global_state import global_state
 from .installation_scripting import installation_scripting, Step
+from .system_calls import open_terminal
 from .page import Page
 from .widgets import reset_model, DeviceRow
 
@@ -29,6 +30,10 @@ class WelcomePage(Gtk.Box, Page):
     @Gtk.Template.Callback('continue')
     def _continue(self, button):
         global_state.advance(self)
+
+    @Gtk.Template.Callback('clicked_terminal_button')
+    def _open_terminal(self, button):
+        open_terminal()
 
     ### public methods ###
 

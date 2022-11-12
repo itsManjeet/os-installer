@@ -23,14 +23,4 @@ template DonePage : Box {
     styles ["suggested-action", "pill"]
   }
 
-  Button {
-    /* Translators: Button label to delay restart after successful installation. Underscore can not be for same letter as 'Restart System'. */
-    label: _("Restart _Later");
-    focusable: true;
-    receives-default: true;
-    action-name: "app.quit";
-    use-underline: true;
-
-    styles ["pill", "bottom-button"]
-  }
 }
